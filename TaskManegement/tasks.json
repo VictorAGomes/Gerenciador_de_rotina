@@ -1,0 +1,61 @@
+[
+  {
+    "name": "DASDAS",
+    "description": "ASDASDAS",
+    "isDone": false,
+    "groupName": "ASDASDASDADAS",
+    "type": "TarefaSimples"
+  },
+  {
+    "date": "2025-01-12",
+    "name": "DASDASD",
+    "description": "ASDASDAS",
+    "isDone": false,
+    "groupName": "ASDASDASDAS",
+    "type": "TarefaMarcada"
+  },
+  {
+    "date": "2025-01-12",
+    "name": "FDSAFSAD",
+    "description": "SDFSDFS",
+    "isDone": false,
+    "groupName": "SDFSDFS",
+    "type": "TarefaMarcada"
+  },
+  {
+    "date": "2025-01-12",
+    "name": "TESTEE",
+    "description": "ASDDAS",
+    "isDone": false,
+    "groupName": "ASDFASD",
+    "type": "TarefaMarcada"
+  },
+  {
+    "name": "TESETEEE",
+    "description": "ADSFAS",
+    "isDone": false,
+    "groupName": "ASDASD",
+    "type": "TarefaSimples"
+  },
+  {
+    "name": "DSFS",
+    "description": "SDFSD",
+    "isDone": false,
+    "groupName": "FSDFSD",
+    "type": "TarefaSimples"
+  },
+  {
+    "name": "ASDASD",
+    "description": "ADSD",
+    "isDone": false,
+    "groupName": "ASDA",
+    "type": "TarefaSimples"
+  },
+  {
+    "name": "SDFSDFSD",
+    "description": "DFASFS",
+    "isDone": false,
+    "groupName": "DSFSD",
+    "type": "TarefaSimples"
+  }
+]

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="tabPane" stylesheets="@style.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.imd.view.TaskController">
+    <tabs>
+        <Tab fx:id="homeTab" closable="false" text="Home">
+            <content>
+                <AnchorPane>
+                    <children>
+                        <BorderPane prefHeight="639.0" prefWidth="894.0">
+                            <left>
+                                <VBox alignment="CENTER_LEFT" prefHeight="758.0" prefWidth="231.0" spacing="5.0" style="-fx-background-color: #2F4A5F; -fx-background-radius: 0 20 0 0;">
+                                    <children>
+                                        <Button fx:id="homeButton" mnemonicParsing="false" onAction="#handleHomeButton" prefHeight="70.0" prefWidth="231.0" styleClass="button1" stylesheets="@style.css" text="HOME" textFill="#ebebeb">
+                                            <font>
+                                                <Font name="Yu Gothic Medium" size="14.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="meuDiaButton" mnemonicParsing="false" onAction="#handleMeuDiaButton" prefHeight="70.0" prefWidth="231.0" styleClass="button1" stylesheets="@style.css" text="MEU DIA" textFill="#ebebeb">
+                                            <font>
+                                                <Font name="Yu Gothic Medium" size="14.0" />
+                                            </font>
+                                        </Button>
+                                        <Button fx:id="atividadesButton" mnemonicParsing="false" onAction="#handleAtividadesButton" prefHeight="70.0" prefWidth="231.0" styleClass="button1" stylesheets="@style.css" text="ATIVIDADES" textFill="#ebebeb">
+                                            <font>
+                                                <Font name="Yu Gothic Medium" size="14.0" />
+                                            </font>
+                                        </Button>
+                                        <Pane prefHeight="200.0" prefWidth="200.0" />
+                                    </children>
+                                </VBox>
+                            </left>
+                            <center>
+                                <BorderPane prefHeight="383.0" prefWidth="663.0">
+                                    <center>
+                                        <Pane BorderPane.alignment="CENTER">
+                                            <children>
+                                                <Label layoutX="30.0" layoutY="14.0" text="CRIE UMA TAREFA:">
+                                                    <font>
+                                                        <Font name="Yu Gothic UI Regular" size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="taskNameTextField" layoutX="103.0" layoutY="62.0" prefHeight="25.0" prefWidth="238.0" style="-fx-text-fill: gray;" />
+                                                <TextField fx:id="taskDescriptionTextField" layoutX="103.0" layoutY="95.0" prefHeight="25.0" prefWidth="238.0" style="-fx-text-fill: gray;" />
+                                                <TextField fx:id="taskGroupTextField" layoutX="103.0" layoutY="127.0" prefHeight="25.0" prefWidth="238.0" style="-fx-text-fill: gray;" />
+                                                <CheckBox fx:id="recurringCheckBox" layoutX="386.0" layoutY="66.0" text="Recorrente?" />
+                                                <ChoiceBox fx:id="recurrenceChoiceBox" layoutX="490.0" layoutY="62.0" prefWidth="150.0" />
+                                                <Button fx:id="addTaskButton" layoutX="103.0" layoutY="181.0" mnemonicParsing="false" onAction="#handleAddTaskButton" styleClass="button1" stylesheets="@style.css" text="Adicionar Atividade" textFill="WHITE" />
+                                                <Label layoutX="30.0" layoutY="65.0" prefHeight="18.0" prefWidth="89.0" text="NOME:">
+                                                    <font>
+                                                        <Font name="Yu Gothic UI Light" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="14.0" layoutY="98.0" prefHeight="18.0" prefWidth="89.0" text="DESCRIÇÃO:">
+                                                    <font>
+                                                        <Font name="Yu Gothic UI Light" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="30.0" layoutY="130.0" prefHeight="18.0" prefWidth="89.0" text="GRUPO:">
+                                                    <font>
+                                                        <Font name="Yu Gothic UI Light" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <Button fx:id="cancelButton" layoutX="279.0" layoutY="181.0" mnemonicParsing="false" onAction="#handleCancelButton" styleClass="button1" stylesheets="@style.css" text="Cancelar" textFill="WHITE" />
+                                                <CheckBox fx:id="deadlineCheckBox" layoutX="386.0" layoutY="100.0" text="Prazo?" />
+                                                <TextField fx:id="deadlineTextField" layoutX="489.0" layoutY="95.0" prefHeight="25.0" prefWidth="151.0" style="-fx-text-fill: gray;" />
+                                            </children>
+                                        </Pane>
+                                    </center>
+                                    <bottom>
+                                        <BorderPane prefHeight="317.0" prefWidth="663.0" BorderPane.alignment="CENTER">
+                                            <top>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                    <children>
+                                                        <Label layoutX="23.0" layoutY="14.0" prefHeight="27.0" prefWidth="236.0" text="ATIVIDADES URGENTES:">
+                                                            <font>
+                                                                <Font name="Yu Gothic UI Regular" size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                          <HBox layoutX="17.0" layoutY="53.0" prefHeight="173.0" prefWidth="637.0" spacing="10.0">
+                                             <children>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2F4A5F; -fx-background-radius: 0 20 0 0;">
+                                                   <children>
+                                                      <Label fx:id="urgentTask1" layoutX="9.0" layoutY="14.0" prefHeight="141.0" prefWidth="182.0" style="-fx-background-color: #3a5f7d; -fx-text-fill: white;" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2F4A5F; -fx-background-radius: 0 20 0 0;">
+                                                   <children>
+                                                      <Label fx:id="urgentTask2" layoutX="9.0" layoutY="16.0" prefHeight="141.0" prefWidth="182.0" style="-fx-background-color: #3a5f7d; -fx-text-fill: white;" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2F4A5F; -fx-background-radius: 0 20 0 0;">
+                                                   <children>
+                                                      <Label fx:id="urgentTask3" layoutX="9.0" layoutY="16.0" prefHeight="141.0" prefWidth="182.0" style="-fx-background-color: #3a5f7d; -fx-text-fill: white;">
+                                                         <font>
+                                                            <Font name="Yu Gothic UI Regular" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </HBox>
+                                                    </children>
+                                                </Pane>
+                                            </top>
+                                        </BorderPane>
+                                    </bottom>
+                                </BorderPane>
+                            </center>
+                            <top>
+                                <Pane prefHeight="72.0" prefWidth="894.0" BorderPane.alignment="CENTER">
+                                    <children>
+                                        <ImageView fitHeight="132.0" fitWidth="118.0" layoutX="-16.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@images/logoo-removebg-preview.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView fitHeight="222.0" fitWidth="248.0" layoutX="34.0" layoutY="-134.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@images/logoo-removebg-preview%20(1).png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </Pane>
+                            </top>
+                        </BorderPane>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+      <Tab fx:id="meuDiaTab" closable="false" text="MeuDia">
+         <content>
+            <AnchorPane>
+               <children>
+                  <BorderPane prefHeight="639.0" prefWidth="894.0">
+                     <left>
+                        <VBox alignment="CENTER_LEFT" prefHeight="758.0" prefWidth="231.0" spacing="5.0" style="-fx-background-color: #2F4A5F; -fx-background-radius: 0 20 0 0;">
+                           <children>
+                              <Button fx:id="homeButton1" mnemonicParsing="false" onAction="#handleHomeButton" prefHeight="70.0" prefWidth="231.0" styleClass="button1" stylesheets="@style.css" text="HOME" textFill="#ebebeb">
+                                 <font>
+                                    <Font name="Yu Gothic Medium" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="meuDiaButton1" mnemonicParsing="false" onAction="#handleMeuDiaButton" prefHeight="70.0" prefWidth="231.0" styleClass="button1" stylesheets="@style.css" text="MEU DIA" textFill="#ebebeb">
+                                 <font>
+                                    <Font name="Yu Gothic Medium" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="atividadesButton" mnemonicParsing="false" onAction="#handleAtividadesButton" prefHeight="70.0" prefWidth="231.0" styleClass="button1" stylesheets="@style.css" text="ATIVIDADES" textFill="#ebebeb">
+                                 <font>
+                                    <Font name="Yu Gothic Medium" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </left>
+                     <center>
+                        <BorderPane prefHeight="383.0" prefWidth="663.0">
+                           <center>
+                              <Pane prefHeight="90.0" prefWidth="663.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label layoutX="30.0" layoutY="14.0" text="ATIVIDADES DO DIA:">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </center>
+                           <bottom>
+                              <BorderPane prefHeight="518.0" prefWidth="663.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                     <ScrollPane prefHeight="450.0" prefWidth="663.0" BorderPane.alignment="CENTER">
+                                         <content>
+                                             <AnchorPane>
+                                                 <children>
+                                                     <VBox fx:id="meudiaVbox" layoutX="14.0" layoutY="21.0" spacing="20.0" />
+                                                 </children>
+                                             </AnchorPane>
+                                         </content>
+                                     </ScrollPane>
+                                 </center></BorderPane>
+                           </bottom>
+                        </BorderPane>
+                     </center>
+                     <top>
+                        <Pane prefHeight="72.0" prefWidth="894.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="132.0" fitWidth="118.0" layoutX="-16.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/logoo-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="222.0" fitWidth="248.0" layoutX="34.0" layoutY="-134.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/logoo-removebg-preview%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </top>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab fx:id="atividadesTab" closable="false" text="Atividades">
+         <content>
+            <AnchorPane>
+               <children>
+                  <BorderPane prefHeight="639.0" prefWidth="894.0">
+                     <left>
+                        <VBox alignment="CENTER_LEFT" prefHeight="758.0" prefWidth="231.0" spacing="5.0" style="-fx-background-color: #2F4A5F; -fx-background-radius: 0 20 0 0;">
+                           <children>
+                              <Button fx:id="homeButton11" mnemonicParsing="false" onAction="#handleHomeButton" prefHeight="70.0" prefWidth="231.0" styleClass="button1" stylesheets="@style.css" text="HOME" textFill="#ebebeb">
+                                 <font>
+                                    <Font name="Yu Gothic Medium" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="meuDiaButton11" mnemonicParsing="false" onAction="#handleMeuDiaButton" prefHeight="70.0" prefWidth="231.0" styleClass="button1" stylesheets="@style.css" text="MEU DIA" textFill="#ebebeb">
+                                 <font>
+                                    <Font name="Yu Gothic Medium" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="atividadesButton" mnemonicParsing="false" onAction="#handleAtividadesButton" prefHeight="70.0" prefWidth="231.0" styleClass="button1" stylesheets="@style.css" text="ATIVIDADES" textFill="#ebebeb">
+                                 <font>
+                                    <Font name="Yu Gothic Medium" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Pane prefHeight="200.0" prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </left>
+                     <center>
+                        <BorderPane prefHeight="383.0" prefWidth="663.0">
+                           <bottom>
+                              <BorderPane prefHeight="498.0" prefWidth="663.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <ScrollPane prefHeight="450.0" prefWidth="663.0" BorderPane.alignment="CENTER">
+                                      <content>
+                                        <AnchorPane>
+                                             <children>
+                                                <VBox fx:id="activitiesVBox" layoutX="14.0" layoutY="21.0" spacing="20.0" />
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                 </center></BorderPane>
+                           </bottom>
+                           <top>
+                              <Pane prefHeight="78.0" prefWidth="663.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="17.0" prefHeight="36.0" prefWidth="104.0" text="FILTRAR POR:">
+                                       <font>
+                                          <Font name="Yu Gothic UI Regular" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="filterNameField" layoutX="112.0" layoutY="23.0" prefHeight="25.0" prefWidth="141.0" promptText="NOME" style="-fx-text-fill: gray;" />
+                                    <TextField fx:id="filterGroupField" layoutX="270.0" layoutY="23.0" prefHeight="25.0" prefWidth="141.0" promptText="GRUPO" style="-fx-text-fill: gray;" />
+                                    <CheckBox fx:id="filterDoneCheckBox" layoutX="112.0" layoutY="56.0" mnemonicParsing="false" text="CONCLUIDAS" />
+                                    <CheckBox fx:id="filterNotDoneCheckBox" layoutX="230.0" layoutY="56.0" mnemonicParsing="false" text="NÃO CONCLUIDAS" />
+                                    <Button fx:id="applyFiltersButton" layoutX="498.0" layoutY="52.0" mnemonicParsing="false" onAction="#handleApplyFilters" prefHeight="25.0" prefWidth="101.0" styleClass="button1" stylesheets="@style.css" text="FILTRAR" textFill="WHITE" />
+                                    <DatePicker fx:id="filterDatePicker" layoutX="425.0" layoutY="23.0" style="-fx-text-fill: gray;" />
+                                    <Button fx:id="cleanFiltersButton" layoutX="375.0" layoutY="52.0" mnemonicParsing="false" onAction="#handleCleanFiltersButton" prefHeight="25.0" prefWidth="113.0" styleClass="button1" stylesheets="@style.css" text="LIMPAR FILTROS" textFill="WHITE" />
+                                 </children>
+                              </Pane>
+                           </top>
+                        </BorderPane>
+                     </center>
+                     <top>
+                        <Pane prefHeight="72.0" prefWidth="894.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="132.0" fitWidth="118.0" layoutX="-16.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/logoo-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="222.0" fitWidth="248.0" layoutX="34.0" layoutY="-134.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/logoo-removebg-preview%20(1).png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="247.0" layoutY="23.0" text="TODAS AS ATIVIDADES:">
+                                 <font>
+                                    <Font name="Yu Gothic UI Regular" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </top>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+    </tabs>
+</TabPane>
